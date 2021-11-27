@@ -1,0 +1,37 @@
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--YYYY MM DD   20010223                   convert(varchar, GETDATE() ,112)   112    8
+--YY MM DD     010223                     convert(varchar, GETDATE() ,12)    12     6
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--YYYY MM DD   2001/02/23                 convert(varchar, GETDATE() ,111)   111    10
+--YY MM DD     01/02/23                   convert(varchar, GETDATE() ,11)    11     8
+--MM DD YYYY   02/23/2001                 convert(varchar, GETDATE() ,101)   101    10
+--MM DD YY     02/23/01                   convert(varchar, GETDATE() ,1)     1      8
+--DD MM YYYY   23/02/2001                 convert(varchar, GETDATE() ,103)   103    10
+--DD MM YY     23/02/01                   convert(varchar, GETDATE() ,3)     3      8
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--YYYY MM DD   2001.02.23                 convert(varchar, GETDATE() ,102)   102    10
+--YY MM DD     01.02.23                   convert(varchar, GETDATE() ,2)     2      8
+--DD MM YYYY   23.02.2001                 convert(varchar, GETDATE() ,104)   104    10
+--DD MM YY     23.02.01                   convert(varchar, GETDATE() ,4)     4  
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--YYYY MM DD   2001-02-23 04:05:06.007    convert(varchar, GETDATE() ,121)   121    23
+--YYYY MM DD   2001-02-23 04:05:06        convert(varchar, GETDATE() ,120)   120    19
+--MM DD YYYY   02-23-2001                 convert(varchar, GETDATE() ,110)   110    10
+--MM DD YY     02-23-01                   convert(varchar, GETDATE() ,10)    10     8
+--DD MM YYYY   23-02-2001                 convert(varchar, GETDATE() ,105)   105    10
+--DD MM YY     23-02-01                   convert(varchar, GETDATE() ,5)     5      8
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--MMM DD YYYY  Feb 23 2001 4:05:06:007AM  convert(varchar, GETDATE() ,9)     9      26
+--MMM DD YYYY  Feb 23 2001 4:05:06:007AM  convert(varchar, GETDATE() ,109)   109    26
+--MMM DD YYYY  Feb 23 2001 4:05AM         convert(varchar, GETDATE() ,100)   100    19
+--MMM DD YYYY  Feb 23, 2001               convert(varchar, GETDATE() ,107)   107    12
+--MMM DD YY    Feb 23, 01                 convert(varchar, GETDATE() ,7)     7      10
+--DD MMM YYYY  23 Feb 2001 04:05:06:007   convert(varchar, GETDATE() ,13)    13     24
+--DD MMM YYYY  23 Feb 2001 04:05:06:007   convert(varchar, GETDATE() ,113)   113    24
+--DD MM YYYY   23 Feb 2001                convert(varchar, GETDATE() ,106)   106    11
+--DD MM YY     23 Feb 01                  convert(varchar, GETDATE() ,6)     6      9
+--PATTERN      STYLED DATE                SYNTAX                                  STYLE  LENGTH
+--hh:mm:ss:ms  04:05:06:007               convert(varchar, GETDATE() ,14)    14     12
+--hh:mm:ss:ms  04:05:06:007               convert(varchar, GETDATE() ,114)   114    12
+--hh:mm:ss     04:05:06                   convert(varchar, GETDATE() ,8)     8      8
+--hh:mm:ss     04:05:06                   convert(varchar, GETDATE() ,108)   108    8
