@@ -9,12 +9,12 @@ select
 	,prod.nome
 	,preco1.Preco preco1
 	,preco2.Preco preco2
-	,case 
+	,concat (case 
 		when preco2.preco <> 0 and preco1.preco <> 0 then (((preco1.Preco - preco2.Preco) / preco1.preco)*100)
 		-- o calculo acima representa a formula usada pelo shop para se chegar a lucratividade real
 		when preco1.preco = 0 then -100
 		else 100
-	end lucro_percent
+	end, '%') lucro_percent
 
 from Prod_Serv prod
 inner join Prod_Serv_Precos preco1 on preco1.Ordem_Prod_Serv = prod.ordem and preco1.Ordem_Tabela_Preco = (select ordem from Tabelas_Preco where nome = @tabela1)
